@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Search and filter 12 key skincare ingredients by category and skin type. Save your favourites.">
+  <title>Ingredient Library | GlowGuide</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script src="js/main.js" defer></script>
+  <script src="js/ingredients.js" defer></script>
+</head>
+<body data-page="ingredients">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" id="siteHeader"></header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="media page-hero__bg"><img src="https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?auto=format&fit=crop&w=1800&q=75" alt="" role="presentation"></div>
+      <div class="container">
+        <p class="greeting" data-greeting="{name}, explore the ingredients that can complement your skincare routine."></p>
+        <h1>Ingredient Library</h1>
+        <p class="lead">Twelve well-known ingredients, explained plainly: what they do, who they suit and how to use them.</p>
+      </div>
+    </section>
+
+    <section class="section section--cream" aria-label="Ingredient library">
+      <div class="container">
+        <form class="toolbar" id="ingredientFilters" role="search" aria-label="Search and filter ingredients">
+          <div class="field search"><label for="ingredientSearch">Search ingredients</label><input type="search" id="ingredientSearch" placeholder="Try &ldquo;acid&rdquo; or &ldquo;hydrating&rdquo;" autocomplete="off"></div>
+          <div class="field"><label for="categoryFilter">Category</label><select id="categoryFilter"><option value="all">All categories</option></select></div>
+          <div class="field"><label for="skinFilter">Skin type</label>
+            <select id="skinFilter"><option value="all">All skin types</option><option value="oily">Oily</option><option value="dry">Dry</option><option value="combination">Combination</option><option value="normal">Normal</option></select></div>
+          <div class="field"><label for="sortSelect">Sort</label>
+            <select id="sortSelect"><option value="az">A to Z</option><option value="za">Z to A</option></select></div>
+        </form>
+        <div class="results-bar">
+          <p id="resultCount" role="status" aria-live="polite" style="margin:0"></p>
+          <div class="actions">
+            <button class="toggle-btn" type="button" id="favToggle" aria-pressed="false">Show favourites (0)</button>
+            <button class="toggle-btn" type="button" id="clearFilters">Clear filters</button>
+          </div>
+        </div>
+        <div class="grid grid-3" id="ingredientGrid"></div>
+        <div class="empty-state" id="emptyState" hidden>
+          <h3>No ingredients match</h3>
+          <p>Try a different search word, or clear the filters to see all twelve ingredients.</p>
+        </div>
+        <p class="quiz-disclaimer" style="margin-top:2rem">Educational information only. Always patch-test new products, and speak with a dermatologist or pharmacist if you are pregnant, have a skin condition or are unsure.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="siteFooter"></footer>
+</body>
+</html>

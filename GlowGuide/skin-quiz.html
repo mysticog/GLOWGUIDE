@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Take the GlowGuide skin type quiz: seven questions to discover whether your skin is oily, dry, combination or normal.">
+  <title>Skin Quiz | GlowGuide</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script src="js/main.js" defer></script>
+  <script src="js/quiz.js" defer></script>
+</head>
+<body data-page="quiz">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" id="siteHeader"></header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="media page-hero__bg"><img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=1800&q=75" alt="" role="presentation"></div>
+      <div class="container">
+        <p class="greeting" data-greeting="{name}, let's discover what your skin needs."></p>
+        <h1>Find Your Skin Type</h1>
+        <p class="lead">Seven short questions about how your skin feels and looks through the day. There are no wrong answers.</p>
+      </div>
+    </section>
+
+    <section class="section section--cream" aria-label="Skin type quiz">
+      <div class="container">
+        <!-- Intro -->
+        <div class="quiz-intro" id="quizIntro">
+          <h2>Ready when you are</h2>
+          <p class="lead" style="margin-inline:auto">It takes about two minutes. Think about how your skin behaves on a normal day, with no special treatments.</p>
+          <div class="btn-row" style="justify-content:center"><button class="btn btn-primary" id="startQuiz" type="button">Start the quiz</button></div>
+          <p class="quiz-disclaimer">This quiz is an educational self-assessment, not a medical diagnosis. For acne, rashes or any persistent concern, speak with a dermatologist.</p>
+        </div>
+
+        <!-- Questions -->
+        <div class="quiz-shell" id="quizShell" hidden>
+          <div class="quiz-progress">
+            <div class="quiz-progress__top"><span id="quizStep">Question 1 of 7</span><span id="quizPct">14%</span></div>
+            <div class="bar" id="quizBar" role="progressbar" aria-label="Quiz progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span></span></div>
+          </div>
+          <form id="quizForm" novalidate>
+            <div id="quizBody"></div>
+            <p class="quiz-error" id="quizError" role="alert"></p>
+            <div class="quiz-nav">
+              <button class="btn btn-outline" type="button" id="prevBtn">Previous</button>
+              <button class="btn btn-primary" type="submit" id="nextBtn">Next</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Result -->
+        <div class="quiz-shell quiz-result" id="quizResult" hidden aria-live="polite"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="siteFooter"></footer>
+</body>
+</html>

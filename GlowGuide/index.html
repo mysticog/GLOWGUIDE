@@ -1,0 +1,197 @@
+<!--Jaaldi banaa na tha is liye basic hi banaya hai sid baaki inso pke liye hi hai aisa kuch banana hai isse bhi kam scale ka hua to 
+chalega but you need to explain each and every thing so us hisab se bana na-->>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="GlowGuide is an educational skincare platform: find your skin type, explore ingredients and build a routine that works for you.">
+  <title>GlowGuide | Understand Your Skin. Discover Your Glow.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body data-page="home">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" id="siteHeader"></header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero" aria-labelledby="heroTitle">
+      <div class="container hero-grid">
+        <div>
+          <p class="greeting" data-greeting="Welcome to your GlowGuide, {name}!"></p>
+          <h1 id="heroTitle">Your Skin. Your Science. Your Glow.</h1>
+          <p class="lead">Discover what your skin truly needs. Explore ingredients, understand your skin type, and build a routine that works for you.</p>
+          <div class="btn-row">
+            <a class="btn btn-primary" href="skin-quiz.html">Discover Your Skin</a>
+            <a class="btn btn-outline" href="ingredients.html">Explore Skincare</a>
+          </div>
+        </div>
+        <div class="hero-media">
+          <div class="media arch"><img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=1000&q=80" alt="Minimal skincare serum bottle with dropper on a neutral surface" fetchpriority="high"></div>
+          <div class="media float-card"><img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=500&q=75" alt="Jar of moisturising cream beside a green leaf" loading="lazy"></div>
+          <p class="hero-badge">Skincare, explained simply.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 1. Discover your skin -->
+    <section class="section section--cream" aria-labelledby="typesTitle">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="kicker">Start here</span>
+          <h2 id="typesTitle">Discover your skin</h2>
+          <p class="lead">Every skin type has its own rhythm. Learn how each one behaves and what it asks for.</p>
+        </div>
+        <div class="grid grid-4">
+          <a class="skin-card reveal" href="skin-guide.html#oily">
+            <div class="media"><img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=700&q=75" alt="Close-up of a fresh, dewy face" loading="lazy"></div>
+            <div class="skin-card__body"><h3>Oily Skin</h3><p>Shine, visible pores and a need for balance.</p></div>
+          </a>
+          <a class="skin-card reveal" href="skin-guide.html#dry">
+            <div class="media"><img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=700&q=75" alt="Woman applying moisturiser to her cheek" loading="lazy"></div>
+            <div class="skin-card__body"><h3>Dry Skin</h3><p>Tightness, flakiness and a craving for comfort.</p></div>
+          </a>
+          <a class="skin-card reveal" href="skin-guide.html#combination">
+            <div class="media"><img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=700&q=75" alt="Portrait of a person with healthy, glowing skin" loading="lazy"></div>
+            <div class="skin-card__body"><h3>Combination Skin</h3><p>An oily T-zone with drier, calmer cheeks.</p></div>
+          </a>
+          <a class="skin-card reveal" href="skin-guide.html#normal">
+            <div class="media"><img src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&w=700&q=75" alt="Person with calm, even skin holding a facial cleanser" loading="lazy"></div>
+            <div class="skin-card__body"><h3>Normal Skin</h3><p>Balanced, comfortable and easy to maintain.</p></div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Find your skin type -->
+    <section class="section" aria-labelledby="quizTitle">
+      <div class="container">
+        <div class="cta-band reveal">
+          <div class="cta-band__text">
+            <span class="kicker" style="color:var(--sage)">Two minutes, seven questions</span>
+            <h2 id="quizTitle">Find your skin type</h2>
+            <p>Answer a few questions about how your skin looks and feels through the day, and get a personal profile with a starter routine and ingredients to explore.</p>
+            <ul class="cta-list">
+              <li>Quick, friendly and private</li>
+              <li>Result saved in your browser</li>
+              <li>An educational self-assessment, not a diagnosis</li>
+            </ul>
+            <div class="btn-row"><a class="btn btn-light" href="skin-quiz.html">Take the skin quiz</a></div>
+          </div>
+          <div class="media"><img src="https://images.unsplash.com/photo-1612817288484-6f916006741a?auto=format&fit=crop&w=900&q=75" alt="Assorted skincare bottles arranged on a shelf" loading="lazy"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Ingredient spotlight -->
+    <section class="section section--cream" aria-labelledby="ingTitle">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="kicker">Ingredient spotlight</span>
+          <h2 id="ingTitle">Know what is in your bottle</h2>
+          <p class="lead">Four well-researched ingredients worth understanding before you shop.</p>
+        </div>
+        <div class="grid grid-4">
+          <a class="ing-mini reveal" href="ingredients.html?q=Hyaluronic">
+            <div class="media"><img src="https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?auto=format&fit=crop&w=600&q=75" alt="Dropper bottle of hydrating serum" loading="lazy"></div>
+            <div class="body"><h3>Hyaluronic Acid</h3><p>A water-loving humectant that plumps and hydrates.</p></div>
+          </a>
+          <a class="ing-mini reveal" href="ingredients.html?q=Niacinamide">
+            <div class="media"><img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?auto=format&fit=crop&w=600&q=75" alt="Skincare serum bottles in soft light" loading="lazy"></div>
+            <div class="body"><h3>Niacinamide</h3><p>Supports the barrier and helps even out tone and oil.</p></div>
+          </a>
+          <a class="ing-mini reveal" href="ingredients.html?q=Salicylic">
+            <div class="media"><img src="https://images.unsplash.com/photo-1571781926291-c477ebfd024b?auto=format&fit=crop&w=600&q=75" alt="Skincare product bottles on a table" loading="lazy"></div>
+            <div class="body"><h3>Salicylic Acid</h3><p>An oil-soluble exfoliant that clears congested pores.</p></div>
+          </a>
+          <a class="ing-mini reveal" href="ingredients.html?q=Vitamin">
+            <div class="media"><img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=600&q=75" alt="Glass dropper bottle of brightening serum" loading="lazy"></div>
+            <div class="body"><h3>Vitamin C</h3><p>An antioxidant that brightens and protects.</p></div>
+          </a>
+        </div>
+        <div class="btn-row"><a class="btn btn-outline" href="ingredients.html">Browse all ingredients</a></div>
+      </div>
+    </section>
+
+    <!-- 4. Build your routine -->
+    <section class="section" aria-labelledby="routineTitle">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="kicker">Simple, steady, effective</span>
+          <h2 id="routineTitle">Build your routine</h2>
+          <p class="lead">Five steps in the morning, five at night. Tick them off in our planner.</p>
+        </div>
+        <div class="grid grid-2">
+          <article class="card reveal">
+            <div class="card__media media"><img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=900&q=75" alt="Morning skincare essentials: cream jar and leaves" loading="lazy"></div>
+            <div class="card__body">
+              <h3>Morning routine</h3>
+              <p>Protect and prepare your skin for the day ahead.</p>
+              <ul class="check"><li>Gentle cleanser</li><li>Toner (optional)</li><li>Serum</li><li>Moisturizer</li><li>Sunscreen</li></ul>
+              <a class="text-link" href="routines.html#morning">Open the morning planner</a>
+            </div>
+          </article>
+          <article class="card reveal">
+            <div class="card__media media"><img src="https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?auto=format&fit=crop&w=900&q=75" alt="Evening skincare products in a calm setting" loading="lazy"></div>
+            <div class="card__body">
+              <h3>Night routine</h3>
+              <p>Cleanse away the day and let your skin repair overnight.</p>
+              <ul class="check"><li>Makeup remover (if needed)</li><li>Cleanser</li><li>Treatment serum</li><li>Moisturizer</li><li>Optional overnight treatment</li></ul>
+              <a class="text-link" href="routines.html#night">Open the night planner</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Latest from the journal -->
+    <section class="section section--cream" aria-labelledby="journalTitle">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="kicker">Read and learn</span>
+          <h2 id="journalTitle">Latest from the journal</h2>
+        </div>
+        <div class="grid grid-3">
+          <article class="card reveal">
+            <div class="card__media media"><img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=75" alt="Woman gently applying skincare to her face" loading="lazy"></div>
+            <div class="card__body"><div class="tag-row"><span class="tag">Skincare Basics</span></div><h3>The Beginner's Guide to Skincare</h3><p>Three habits are enough to start. Here is how to begin without overwhelm.</p><a class="text-link" href="journal.html">Read in the journal</a></div>
+          </article>
+          <article class="card reveal">
+            <div class="card__media media"><img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?auto=format&fit=crop&w=800&q=75" alt="Skincare serum bottles lined up" loading="lazy"></div>
+            <div class="card__body"><div class="tag-row"><span class="tag">Ingredients Explained</span></div><h3>Niacinamide: Everything You Should Know</h3><p>What this vitamin B3 does, who it suits and how to use it well.</p><a class="text-link" href="journal.html">Read in the journal</a></div>
+          </article>
+          <article class="card reveal">
+            <div class="card__media media"><img src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&w=800&q=75" alt="Person applying sunscreen in natural light" loading="lazy"></div>
+            <div class="card__body"><div class="tag-row"><span class="tag">Daily Skincare</span></div><h3>Understanding the Importance of Sunscreen</h3><p>The one step that protects every other step in your routine.</p><a class="text-link" href="journal.html">Read in the journal</a></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Newsletter -->
+    <section class="section" aria-labelledby="newsTitle">
+      <div class="container newsletter reveal">
+        <span class="kicker">The GlowGuide letter</span>
+        <h2 id="newsTitle">Skin knowledge, once a month</h2>
+        <p class="lead" style="margin-inline:auto">One calm email with a new ingredient, a routine tip and a myth busted. This is a frontend demo, so nothing is actually sent.</p>
+        <form class="newsletter-form" id="newsletterForm" novalidate>
+          <div class="field">
+            <label for="newsletterEmail">Email address</label>
+            <input type="email" id="newsletterEmail" name="email" placeholder="name@example.com" autocomplete="email" required aria-describedby="newsletterMsg">
+          </div>
+          <button class="btn btn-primary" type="submit">Subscribe</button>
+        </form>
+        <p id="newsletterMsg" role="status" aria-live="polite"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="siteFooter"></footer>
+</body>
+</html>

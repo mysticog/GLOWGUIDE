@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Your personal skincare planner: morning and night routine checklists, layering order and tips for introducing new ingredients.">
+  <title>Skincare Routines | GlowGuide</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script src="js/main.js" defer></script>
+  <script src="js/routines.js" defer></script>
+</head>
+<body data-page="routines">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" id="siteHeader"></header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="media page-hero__bg"><img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=1800&q=75" alt="" role="presentation"></div>
+      <div class="container">
+        <p class="greeting" data-greeting="Your daily skincare routine, {name}."></p>
+        <h1>Skincare Routines</h1>
+        <p class="lead">A calm five-step routine for morning and night. Tick each step as you go and your progress is saved on this device.</p>
+      </div>
+    </section>
+
+    <!-- Planner -->
+    <section class="section section--cream" id="planner" aria-labelledby="plannerTitle">
+      <div class="container">
+        <h2 id="plannerTitle" class="sr-only">Routine planner</h2>
+        <div class="tabs" role="tablist" aria-label="Routine time of day">
+          <button class="tab" role="tab" id="tab-morning" data-tab="morning" aria-controls="routinePanel" aria-selected="true">Morning routine</button>
+          <button class="tab" role="tab" id="tab-night" data-tab="night" aria-controls="routinePanel" aria-selected="false" tabindex="-1">Night routine</button>
+        </div>
+        <div class="planner">
+          <div id="routinePanel" role="tabpanel" aria-labelledby="tab-morning">
+            <div class="step-list" id="routineList"></div>
+          </div>
+          <aside class="progress-card" aria-label="Routine progress">
+            <h3 id="progressTitle">Morning progress</h3>
+            <p class="big-pct" id="progressPct">0%</p>
+            <div class="bar" id="progressBar" role="progressbar" aria-labelledby="progressTitle" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span></span></div>
+            <p id="progressText" role="status" aria-live="polite">0 of 5 steps complete</p>
+            <button class="btn btn-light btn-block" type="button" id="resetRoutine">Reset routine</button>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- Layering -->
+    <section class="section" aria-labelledby="layerTitle">
+      <div class="container">
+        <div class="section-head reveal"><span class="kicker">Order matters</span><h2 id="layerTitle">Skincare layering guide</h2>
+          <p class="lead">Apply products from the thinnest texture to the thickest, so lighter formulas can absorb before heavier ones seal them in.</p></div>
+        <ol class="layer-flow reveal" aria-label="Layering order">
+          <li>Cleanser</li><li>Toner</li><li>Serum</li><li>Eye cream</li><li>Moisturiser</li><li>Sunscreen (morning) or oil (night)</li>
+        </ol>
+        <p style="margin-top:1.4rem;color:var(--muted);max-width:62ch">Water-based products go first. Wait about a minute between active serums, and let sunscreen be the very last step in the morning.</p>
+      </div>
+    </section>
+
+    <!-- Introducing ingredients -->
+    <section class="section section--cream" aria-labelledby="introTitle">
+      <div class="container">
+        <div class="section-head reveal"><span class="kicker">Go slowly</span><h2 id="introTitle">How to introduce new ingredients</h2>
+          <p class="lead">Skin needs time to adjust. A slow start helps you spot what works, and what does not.</p></div>
+        <ul class="timeline reveal">
+          <li><strong>Day 1: patch test</strong><span>Dab a little on your inner forearm or behind the ear. Wait 24 hours and look for redness or itching.</span></li>
+          <li><strong>Weeks 1 to 2</strong><span>Use the product twice a week, on non-consecutive nights.</span></li>
+          <li><strong>Weeks 3 to 4</strong><span>If skin feels calm, move to every other night.</span></li>
+          <li><strong>Week 5 onwards</strong><span>Build to the recommended frequency. Add only one new product at a time.</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Mistakes + Beginner -->
+    <section class="section" aria-labelledby="mistakesTitle">
+      <div class="container split">
+        <div class="reveal">
+          <span class="kicker">Avoid the traps</span>
+          <h2 id="mistakesTitle">Common routine mistakes</h2>
+          <ul class="check">
+            <li>Using too many actives at once</li>
+            <li>Exfoliating every day</li>
+            <li>Skipping sunscreen, or applying too little</li>
+            <li>Switching products every week</li>
+            <li>Washing with very hot water</li>
+            <li>Picking at blemishes, which can cause marks</li>
+          </ul>
+        </div>
+        <div class="info-card reveal">
+          <span class="kicker">Brand new to skincare?</span>
+          <h3>Beginner skincare routine</h3>
+          <p style="margin-bottom:1rem">Three products are enough to start:</p>
+          <ol class="check">
+            <li><strong>Gentle cleanser</strong> morning and night</li>
+            <li><strong>Moisturiser</strong> morning and night</li>
+            <li><strong>Sunscreen</strong> every morning, SPF 30 or higher</li>
+          </ol>
+          <p style="margin-top:1rem">Follow this for a few weeks before adding a serum.</p>
+          <a class="btn btn-outline btn-sm" href="skin-quiz.html">Find my skin type first</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Consistency + disclaimer -->
+    <section class="section section--cream" aria-labelledby="consistencyTitle">
+      <div class="container">
+        <div class="section-head reveal"><span class="kicker">The real secret</span><h2 id="consistencyTitle">Skincare consistency tips</h2></div>
+        <div class="grid grid-3">
+          <div class="info-card reveal"><h3>Tie it to a habit</h3><p>Cleanse right after brushing your teeth. Linking steps to something you already do makes them stick.</p></div>
+          <div class="info-card reveal"><h3>Keep products visible</h3><p>Place your essentials by the sink, where you will see them. Out of sight is out of routine.</p></div>
+          <div class="info-card reveal"><h3>Judge by weeks, not days</h3><p>Skin renews over about four weeks. Give a routine at least a month before deciding if it works.</p></div>
+        </div>
+        <div class="disclaimer reveal" style="margin-top:2.5rem" role="note">
+          <p><strong>Please note:</strong> GlowGuide is educational and does not replace professional advice. Always patch-test new products, and see a dermatologist or doctor for persistent breakouts, rashes, pain, or any change in your skin that worries you.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="siteFooter"></footer>
+</body>
+</html>

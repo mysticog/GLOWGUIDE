@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The GlowGuide Beauty Journal: skincare basics, ingredients explained, trends, daily routines, and myths versus facts.">
+  <title>Beauty Journal | GlowGuide</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script src="js/main.js" defer></script>
+  <script src="js/journal.js" defer></script>
+</head>
+<body data-page="journal">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" id="siteHeader"></header>
+
+  <main id="main">
+    <section class="section" style="padding-bottom:2rem">
+      <div class="container">
+        <p class="greeting" data-greeting="A little beauty knowledge for you, {name}."></p>
+        <h1 style="margin-bottom:1.5rem">The Beauty Journal</h1>
+        <article class="featured reveal" aria-labelledby="featTitle">
+          <div class="media"><img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1400&q=80" alt="Woman gently touching her face, with a soft, glowing complexion" fetchpriority="high"></div>
+          <div class="featured__body">
+            <span class="kicker">Featured story</span>
+            <h2 id="featTitle">The Art of Understanding Your Skin</h2>
+            <p>Great skin is rarely about a miracle product. It begins with paying attention: how your skin feels after cleansing, what it needs in winter, and when it asks you to slow down. This feature shows you how to read those signals.</p>
+            <div class="btn-row" style="margin-top:.5rem"><button class="btn btn-primary" type="button" id="readFeatured">Read the feature</button></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section--cream" aria-label="Journal articles">
+      <div class="container">
+        <form class="toolbar" id="journalSearchForm" role="search" style="grid-template-columns:1fr auto">
+          <div class="field"><label for="articleSearch">Search articles</label><input type="search" id="articleSearch" placeholder="Try &ldquo;sunscreen&rdquo; or &ldquo;barrier&rdquo;" autocomplete="off"></div>
+          <button class="toggle-btn" type="button" id="bookmarkToggle" aria-pressed="false">Saved articles (0)</button>
+        </form>
+        <div class="chips" id="categoryChips" role="group" aria-label="Filter by category"></div>
+        <p id="articleCount" role="status" aria-live="polite" style="color:var(--muted)"></p>
+        <div class="grid grid-3" id="articleGrid"></div>
+        <div class="empty-state" id="emptyState" hidden>
+          <h3>No articles found</h3>
+          <p>Try another search word or choose a different category.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="siteFooter"></footer>
+</body>
+</html>

@@ -1,0 +1,64 @@
+/* ==========================================================
+   GlowGuide – responsive.css
+   Breakpoints: 1100 (small laptop), 900 (tablet), 600 (phone)
+   ========================================================== */
+@media (max-width: 1100px) {
+  .grid-4 { grid-template-columns: repeat(2, 1fr); }
+  .toolbar { grid-template-columns: 1fr 1fr; }
+  .toolbar .field.search { grid-column: 1 / -1; }
+  .nav-links { gap: 1.05rem; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 900px) {
+  :root { --header-h: 68px; }
+  .nav-toggle { display: block; }
+  .primary-nav {
+    position: absolute; left: 0; right: 0; top: 100%; flex-direction: column; align-items: stretch;
+    background: var(--ivory); padding: 1.2rem 1.25rem 1.8rem; gap: 1.2rem; border-bottom: 1px solid var(--beige);
+    box-shadow: 0 20px 30px rgba(39, 41, 35, .1); max-height: calc(100vh - var(--header-h)); overflow-y: auto;
+    visibility: hidden; opacity: 0; transform: translateY(-8px); transition: all .3s var(--ease);
+  }
+  .nav-open .primary-nav { visibility: visible; opacity: 1; transform: none; }
+  .nav-links { flex-direction: column; gap: 0; }
+  .nav-links a { display: block; padding: .85rem 0; border-bottom: 1px solid var(--cream); font-size: 1.05rem; }
+  .nav-links a::after { display: none; }
+  .nav-actions { flex-direction: column; align-items: stretch; }
+  .nav-actions .btn { width: 100%; }
+  .profile-btn { max-width: none; width: 100%; justify-content: space-between; }
+  .profile-menu { position: static; width: 100%; margin-top: .5rem; box-shadow: none; background: var(--cream); }
+
+  .hero-grid, .split, .cta-band, .featured, .planner, .result-grid { grid-template-columns: 1fr; }
+  .split--reverse > :first-child { order: 0; }
+  .split .media, .split .media.wide { aspect-ratio: 4 / 3; }
+  .hero-media { max-width: 460px; margin-inline: auto; }
+  .hero-media .float-card { left: -4%; }
+  .grid-3 { grid-template-columns: repeat(2, 1fr); }
+  .timeline { grid-template-columns: repeat(2, 1fr); }
+  .progress-card { position: static; }
+  .featured .media { min-height: 300px; }
+  .onboarding { grid-template-columns: 1fr; grid-template-rows: 32vh 1fr; }
+  .onboarding__quote { left: 1.5rem; right: 1.5rem; bottom: 1.2rem; font-size: 1.25rem; }
+  .onboarding__panel { padding: 1.8rem 1.5rem 2.2rem; justify-content: flex-start; }
+  .onboarding__panel .logo { margin-bottom: 1.2rem; }
+}
+
+@media (max-width: 600px) {
+  .container { width: calc(100% - 2rem); }
+  .grid-4, .grid-3, .grid-2, .timeline { grid-template-columns: 1fr; }
+  .toolbar { grid-template-columns: 1fr; }
+  .newsletter-form { flex-direction: column; }
+  .newsletter-form .btn { margin-top: 0; align-self: stretch; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .btn-row .btn { flex: 1 1 100%; }
+  .hero-badge { right: 0; font-size: 1rem; }
+  .modal__body { padding: 1.4rem 1.3rem 1.8rem; }
+  .modal--sm { padding: 1.6rem 1.3rem; }
+  .score-row { grid-template-columns: 90px 1fr 40px; }
+  .quiz-nav .btn { flex: 1; }
+  .tabs { display: flex; }
+  .tab { flex: 1; padding-inline: 1rem; }
+  .step label { padding: 1.1rem; gap: .8rem; }
+  .skin-card { aspect-ratio: 4 / 3.4; }
+  .page-hero h1 { max-width: none; }
+}
